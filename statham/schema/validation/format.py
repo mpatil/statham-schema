@@ -55,6 +55,14 @@ Validators for new formats may be registered as follows:
         ...
 """
 
+@format_checker.register("hex")
+def _is_hex(value: str) -> bool:
+    assert(False)
+    try:
+        v = int(value, 16)
+    except (ValueError, TypeError):
+        return False
+    return True
 
 @format_checker.register("uuid")
 def _is_uuid(value: str) -> bool:

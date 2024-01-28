@@ -147,6 +147,7 @@ class Element(Generic[T]):
         multipleOf: Maybe[Numeric] = NotPassed(),
         format: Maybe[str] = NotPassed(),
         pattern: Maybe[str] = NotPassed(),
+        width: Maybe[str] = NotPassed(),
         minLength: Maybe[int] = NotPassed(),
         maxLength: Maybe[int] = NotPassed(),
         required: Maybe[List[str]] = NotPassed(),
@@ -177,6 +178,7 @@ class Element(Generic[T]):
         self.multipleOf = multipleOf
         self.format = format
         self.pattern = pattern
+        self.width = width
         self.minLength = minLength
         self.maxLength = maxLength
         self.required = required

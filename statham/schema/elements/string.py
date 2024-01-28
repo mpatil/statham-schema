@@ -22,6 +22,7 @@ class String(Element[str]):  # pylint: disable=too-many-instance-attributes
         minLength: Maybe[int] = NotPassed(),
         maxLength: Maybe[int] = NotPassed(),
         description: Maybe[str] = NotPassed(),
+        width: Maybe[int] = NotPassed()
     ):
         self.default = default
         self.const = const
@@ -31,6 +32,7 @@ class String(Element[str]):  # pylint: disable=too-many-instance-attributes
         self.minLength = minLength
         self.maxLength = maxLength
         self.description = description
+        self.width = width
 
     @property
     def type_validator(self):
